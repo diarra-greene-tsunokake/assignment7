@@ -6,13 +6,7 @@
   "directories": {
     "test": "tests"
   },
-  "devDependencies": {
-    "@types/koa": "^2.15.0",
-    "@types/mongodb": "^4.0.6",
-    "@vitest/ui": "^3.2.4",
-    "typescript": "^5.8.3",
-    "vitest": "^3.2.4"
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,9 +21,5 @@
   "bugs": {
     "url": "https://github.com/diarra-greene-tsunokake/assignment7/issues"
   },
-  "homepage": "https://github.com/diarra-greene-tsunokake/assignment7#readme",
-  "dependencies": {
-    "koa": "^3.0.0",
-    "tsoa": "^6.6.0"
-  }
+  "homepage": "https://github.com/diarra-greene-tsunokake/assignment7#readme"
 }

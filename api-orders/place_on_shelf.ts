@@ -1,5 +1,5 @@
-import { type ShelfId, type BookID } from '../../adapter/assignment-4'
-import { InMemoryWarehouse, type WarehouseData } from './warehouse_data'
+import { type ShelfId, type BookID } from '../api-books/documented_types'
+import { InMemoryWarehouse, type WarehouseData } from '../api-warehouse/warehouse_data'
 
 export async function placeBooksOnShelf (data: WarehouseData, bookId: BookID, numberOfBooks: number, shelf: ShelfId): Promise<void> {
   if (numberOfBooks < 0) {

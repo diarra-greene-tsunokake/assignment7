@@ -1,8 +1,8 @@
 import { ObjectId, type Collection, type Db } from 'mongodb'
-import { type BookID, type OrderId, type ShelfId } from '../../adapter/assignment-4'
-import { client } from '../database_access'
+import { type BookID, type OrderId, type ShelfId } from '../api-books/documented_types'
+import { client } from './database_access'
 import { type WarehouseData, InMemoryWarehouse } from './warehouse_data'
-import { generateId, seedWarehouseDatabase } from '../../database_test_utilities'
+import { generateId, seedWarehouseDatabase } from '../database_test_utilities'
 
 export interface WarehouseDatabaseAccessor {
   database: Db
@@ -135,11 +135,11 @@ if (import.meta.vitest !== undefined) {
     const [memOrderId, dbOrderId] = await Promise.all([memData.placeOrder({ book: 2 }), dbData.placeOrder({ book: 2 })])
     const [memOrder, dbOrder] = await Promise.all([memData.getOrder(memOrderId), dbData.getOrder(dbOrderId)])
 
-    expect(memOrder).toMatchObject(dbOrder)
-    expect(dbOrder).toBeTruthy()
-    if (dbOrder !== false) {
-      expect(dbOrder.book).toEqual(2)
-    }
+   expect(dbOrder).toBeTruthy()
+if (dbOrder !== false) {
+  expect(memOrder).toMatchObject(dbOrder)
+  expect(dbOrder.book).toEqual(2)
+}
 
     const [memOrderId2, dbOrderId2] = await Promise.all([memData.placeOrder({ book: 1 }), dbData.placeOrder({ book: 1 })])
     const [memList, dbList] = await Promise.all([memData.listOrders(), dbData.listOrders()])

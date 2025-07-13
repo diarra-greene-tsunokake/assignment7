@@ -1,5 +1,5 @@
-import { type BookID, type OrderId } from '../../adapter/assignment-4'
-import { InMemoryWarehouse, type WarehouseData } from './warehouse_data'
+import { type BookID, type OrderId } from '../api-books/documented_types'
+import { InMemoryWarehouse, type WarehouseData } from '../api-warehouse/warehouse_data'
 
 export async function placeOrder (data: WarehouseData, books: BookID[]): Promise<OrderId> {
   const order: Record<BookID, number> = {}
