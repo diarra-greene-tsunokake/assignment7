@@ -88,6 +88,7 @@ export class OrderRoutes extends Controller {
       return result
     } catch (e) {
       this.setStatus(500)
+      console.error('Error placing order:', e)
       return ''
     }
   }
