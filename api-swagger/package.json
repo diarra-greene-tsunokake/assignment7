@@ -1,0 +1,25 @@
+{
+  "name": "assignment7",
+  "version": "1.0.0",
+  "description": "This is a template repository for the first assignment in BVD 103 at McMaster Continuing Education.",
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diarra-greene-tsunokake/assignment7.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/diarra-greene-tsunokake/assignment7/issues"
+  },
+  "homepage": "https://github.com/diarra-greene-tsunokake/assignment7#readme"
+}
